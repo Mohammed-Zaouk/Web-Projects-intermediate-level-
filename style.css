@@ -1,0 +1,177 @@
+* {
+    margin:  0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url(wallpaperflare.com_wallpaper\(9\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.content{
+    height: 90%;
+    width: 30%;
+    border: solid 2px black;
+    backdrop-filter: blur(20px);
+    box-shadow: 0, 0, 10px black;
+    border-radius: 5px;
+}
+.content .face{
+    position: relative;
+    padding-top: 20px;
+    color: white;
+    font-size: 1.2rem;
+}
+.content .face i{
+    position: absolute;
+    left: 13px;
+    top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    border-radius: 10px;
+}
+.content .face i:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+    color: black;
+}
+.content i{
+    margin-top: 10px;
+    font-size: 2rem;
+    color: white;
+}
+.content .in{
+    margin-top: 30px;
+}
+.content .in select{
+    border: none;
+    width: 90%;
+    border-bottom: solid 2px grey;
+    height: 35px;
+    margin: 10px;
+    background: transparent;
+    font-size: large;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+    transition: all 0.4s ease-in;
+}
+.in select:focus{
+    background-color: grey;
+    border-radius: 5px;
+}
+.content .in input{
+    margin-top: 10px;
+    border: none;
+    width: 90%;
+    border-bottom: solid 2px grey;
+    height: 35px;
+    margin: 10px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+}
+.in input::placeholder{
+    color: white;
+    padding-left: 5px;
+    font-weight: 500;
+    font-size: large;
+    transition: opacity 0.3s ease-in-out; /* Change opacity over 0.3 seconds */
+    opacity: 1; /* Ensure the placeholder text is visible by default */
+}
+.content input:focus{
+    outline: none;
+    border-bottom: 2px solid black; 
+  }
+.content input:focus::placeholder{
+    opacity: 0;
+}
+#btn{
+    width: 90%;
+    height: 50px;
+    color:black;
+    background: lightblue;
+    font-size: medium;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+#btn:hover{
+    background: red;
+}
+#btn:active{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background: brown;
+}
+.table {
+    display: none;
+    position: absolute;
+    height: 90%;
+    width: 30%;
+    border: solid 2px white;
+    backdrop-filter: blur(20px);
+    box-shadow: 0, 0, 10px black;
+    border-radius: 5px;
+    animation: animateModal 0.4s forwards;
+}
+/* Styles for the table */
+.table .populated-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Styles for table header */
+.populated-table th {
+    background: transparent;
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    font-weight: 500;
+}
+
+/* Styles for table data */
+.populated-table td {
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: left;
+    color: white;
+}
+#close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#close:hover{
+    color: brown;
+    font-size: 1.6rem;
+}
+/* Styles for alternating row colors */
+.populated-table tbody tr:nth-child(even) {
+    background: transparent;
+    color: white;
+}
+@keyframes animateModal {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="content" id="content">
+        <div class="face"><h2><i id="key" class='bx bx-menu'></i>To do List</h2></div>
+        <i class='bx bx-bookmarks'></i>
+        <div class="in">
+            <select name="selevt">
+                <option>Business</option>
+                <option>Studing</option>
+                <option>Homeworks</option>
+                <option>Free Time</option>
+                <option>Learning</option>
+            </section>
+            <input type="text" placeholder="Descripsion">
+            <input type="text" placeholder="Place">
+            <input type="text" placeholder="Time">
+            <input type="text" placeholder="Notification">
+            <button id="btn">ADD YOUR THING</button>
+        </div>
+    </div>
+    <div class="table" id="table">
+        <i id="close" class='bx bx-undo' ></i>
+        <table class="populated-table" id="populated-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Notification</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="tt.js"></script>
+</body>
+</html>
